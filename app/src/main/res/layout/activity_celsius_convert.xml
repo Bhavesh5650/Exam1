@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CelsiusConvertActivity">
+
+    <RelativeLayout
+        android:id="@+id/celsiusPageActionBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            android:gravity="center"
+            android:background="@color/purple">
+
+            <ImageView
+                android:id="@+id/celsiusBackBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:src="@drawable/baseline_arrow_back_24"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Celsius To Fahrenheit Convert"
+                android:textColor="@color/white"
+                android:fontFamily="@font/mukta_medium"
+                android:textSize="18sp"
+                android:textAlignment="center"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeOfCelsius"
+        android:layout_below="@id/celsiusPageActionBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/edtCelsiusLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            app:endIconMode="clear_text"
+            android:hint="Enter Celsius Value">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtCelsius"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/celsiusConvertBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Convert"
+            android:layout_below="@id/edtCelsiusLayout"
+            android:layout_marginTop="25dp"
+            android:backgroundTint="@color/purple"
+            android:layout_centerInParent="true"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_below="@id/relativeOfCelsius"
+        android:layout_width="match_parent"
+        android:layout_margin="10dp"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/txtTotalFahrenheit"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Fahrenheit"
+            android:textSize="20sp"
+            android:textAlignment="center"/>
+
+        <TextView
+            android:id="@+id/txtAnswerOfFahrenheit"
+            android:layout_below="@id/txtTotalFahrenheit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="00"
+            android:textSize="16sp"
+            android:textAlignment="center"/>
+
+
+
+    </RelativeLayout>
+
+</RelativeLayout>
