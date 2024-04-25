@@ -42,7 +42,24 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
+                Intent intent3 = new Intent(MainActivity.this,CelsiusConvertActivity.class);
+                startActivity(intent3);
+            }
+        });
+        timeCardView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
 
+                Intent intent3 = new Intent(MainActivity.this,TimeConvertActivity.class);
+                startActivity(intent3);
+            }
+        });
+        dayCardView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent4 = new Intent(MainActivity.this,DayConvertActivity.class);
+                startActivity(intent4);
             }
         });
 

@@ -13,6 +13,12 @@
         android:theme="@style/Theme.ApplicationOfExam"
         tools:targetApi="31">
         <activity
+            android:name=".DayConvertActivity"
+            android:exported="false" />
+        <activity
+            android:name=".TimeConvertActivity"
+            android:exported="false" />
+        <activity
             android:name=".CelsiusConvertActivity"
             android:exported="false" />
         <activity
